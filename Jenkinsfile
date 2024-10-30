@@ -3,7 +3,9 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git url: 'https://github.com/devapangu-abhishek-7/my-node-app.git', branch: 'master'
+                git url: 'https://github.com/devapangu-abhishek-7/my-node-app.git', 
+                    branch: 'master', 
+                    credentialsId: '88fb11e3-852a-4e50-9961-e909aac59248'
             }
         }
         stage('Build Docker Image') {
